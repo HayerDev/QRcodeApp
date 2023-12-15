@@ -1,5 +1,5 @@
-const qrModel = require('../models/qrModel');
-const qrGenerator = require('../utils/qrGenerator');
+const qrModel = require('../model/qrModel');
+const qrGenerator = require('../util/qrGenerator');
 
 exports.generateQRCode = async (req, res) => {
     const { data } = req.body;
