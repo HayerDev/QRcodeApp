@@ -1,0 +1,36 @@
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .qr-input {
+    font-size: 1.5em; 
+    text-align: center;
+    padding: 10px 20px; 
+    margin-bottom: 20px;
+    width: 25%; 
+  }
+  
+  .qr-button {
+    font-size: 1.5em; 
+    padding: 10px 20px; 
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer; 
+  }
+  
+  .qr-image {
+    margin-bottom: 20px;
+    max-width: 300px; 
+    width: 100%; 
+  }
+  
+  .button-wrap {
+    display: inline-block;
+    
+  }
