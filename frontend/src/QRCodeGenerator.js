@@ -19,7 +19,7 @@ export function QRCodeGenerator() {
 
   const goToQRCodeList = () => {
     navigate('/all-qrcodes')
-  }
+  };
 
   return (
     <div className="qr-container">

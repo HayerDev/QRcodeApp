@@ -1,0 +1,67 @@
+.main {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.main-h2 {
+  font-size: 2em;
+}
+
+.main-ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+.main-li {
+  font-size: 1.5em; 
+  margin: 10px 0; 
+}
+
+.main-a {
+  color: blue; 
+  text-decoration: none; 
+}
+
+.main-a:hover {
+    color: #ff0000; 
+  }
+
+.qr-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.qr-button {
+    font-size: 1.5em; 
+    padding: 10px 20px; 
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer; 
+  }
+
+.qr-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.qr-modal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+  
