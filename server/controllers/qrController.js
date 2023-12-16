@@ -1,5 +1,6 @@
 const qrModel = require('../model/qrModel');
 const qrGenerator = require('../util/qrGenerator');
+const QRCode = require('../model/qrModel');
 
 exports.generateQRCode = async (req, res) => {
     console.log(req.body);
@@ -22,5 +23,16 @@ exports.generateQRCode = async (req, res) => {
         res.status(201).json({ message: 'QR Code generated!', qrCodeImage }); // Send src to frontend as res
     } catch (error) {
         res.status(500).json({ message: 'Error generating QR code', error: error.message });
+    }
+};
+
+exports.retrieveAllQR = async (req, res) => {
+    try {
+        const allQRCodes = await QRCode.find(); // Use async/await
+        res.json(allQRCodes);
+        console.log(allQRCodes);
+    } catch (error) {
+        console.error('Error retrieving QR codes:', error);
+        res.status(500).json({ message: 'Error retrieving QR codes', error: error.message });
     }
 };
