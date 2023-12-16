@@ -28,11 +28,30 @@ exports.generateQRCode = async (req, res) => {
 
 exports.retrieveAllQR = async (req, res) => {
     try {
-        const allQRCodes = await QRCode.find(); // Use async/await
+        const allQRCodes = await QRCode.find(); 
         res.json(allQRCodes);
-        console.log(allQRCodes);
     } catch (error) {
         console.error('Error retrieving QR codes:', error);
         res.status(500).json({ message: 'Error retrieving QR codes', error: error.message });
+    }
+};
+
+exports.deleteAllQR = async (req, res) => {
+    try {
+        await QRCode.deleteMany({}); 
+        res.status(201).json({ message: 'All QRs removed'});
+    } catch (error) {
+        console.error('Error removing all QR codes:', error);
+        res.status(500).json({ message: 'Error removing QR codes', error: error.message });
+    }
+};
+
+exports.deleteQRCode = async (req, res) => {
+    try {
+        await QRCode.findByIdAndDelete(req.params.id);
+        res.status(201).json({ message: 'QR removed'});
+    } catch (error) {
+        console.error('Error removing QR code:', error);
+        res.status(500).json({ message: 'Error removing QR code', error: error.message });
     }
 };
