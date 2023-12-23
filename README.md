@@ -14,7 +14,7 @@ QR Code Generator is a full-stack web application that allows users to generate 
 - Frontend: React
 - Backend: Node.js, Express.js
 - Database: MongoDB
-s
+
 ## Setup and Installation
 
 ### Prerequisites
@@ -22,23 +22,23 @@ s
 - MongoDB
 
 ### Installation Steps
-1. Clone the repository:
+1. Clone the repository:\
 	git clone https://github.com/HayerDev/QRcodeApp.git
 
-2. Install backend dependencies:
-	cd server
+2. Install backend dependencies:\
+	cd server\
 	npm install
 
 3. Start the MongoDB server (ensure MongoDB is installed and properly set up on your system).
 
-4. Start the backend server:
+4. Start the backend server:\
 	node server
 
-5. Install frontend dependencies:
-	cd ../client
+5. Install frontend dependencies:\
+	cd ../client\
 	npm install
 
-6. Start the React development server:
+6. Start the React development server:\
 	npm start
 
 7. The application should now be running on http://localhost:3000.
